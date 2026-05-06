@@ -53,6 +53,13 @@ export default function Home() {
                 and troubleshooting workflows.
               </p>
               <Link to="/docs/v19x-api">Read Project</Link>
+              <Link to="/docs/v19x-api">Read Project</Link>
+
+<br />
+
+<a href="https://github.com/Brock-T-Wilson/V19x-Player-Account-API-Docs">
+  View GitHub Repository
+</a>
             </div>
 
             <div style={{
@@ -82,6 +89,20 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section style={{ marginBottom: '4rem' }}>
+  <h2>Skills</h2>
+
+  <ul>
+    <li>API Documentation</li>
+    <li>User Guides</li>
+    <li>Markdown</li>
+    <li>Git & GitHub</li>
+    <li>REST APIs</li>
+    <li>Information Architecture</li>
+    <li>Accessibility Documentation</li>
+    <li>Docusaurus</li>
+  </ul>
+</section>
 
         <section>
           <h2>Contact</h2>
