@@ -1,30 +1,481 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-color-primary: #9c7a4d;
+  --ifm-color-primary-dark: #866540;
+  --ifm-color-primary-darker: #705334;
+  --ifm-color-primary-light: #b08a5a;
+
+  --ifm-background-color: #f7f1e7;
+  --ifm-navbar-background-color: #0d0d0d;
+  --ifm-footer-background-color: #0d0d0d;
+
+  --ifm-font-color-base: #1f1f1f;
+  --ifm-heading-color: #7a5a34;
+
+  --ifm-font-family-base: "Inter", sans-serif;
+  --ifm-heading-font-family: "Georgia", serif;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+body {
+  background:
+    linear-gradient(
+      180deg,
+      #f7f1e7 0%,
+      #efe5d6 100%
+    );
+
+  color: #1f1f1f;
+}
+
+.main-wrapper {
+  background: transparent;
+}
+
+.navbar {
+  background: rgba(13,13,13,0.96);
+
+  border-bottom: 1px solid rgba(247,241,231,0.16);
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,0.2);
+}
+
+.footer {
+  background: #0d0d0d;
+
+  border-top: 1px solid rgba(247,241,231,0.16);
+}
+
+.navbar a,
+.footer a,
+.navbar__title {
+  color: #f7f1e7 !important;
+}
+
+h1,
+h2,
+h3 {
+  color: #7a5a34;
+
+  font-family: Georgia, serif;
+
+  letter-spacing: -0.03em;
+}
+
+p,
+li {
+  color: #2f2f2f;
+}
+
+a {
+  color: #7a5a34;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000000;
+
+  text-decoration: underline;
+}
+
+.button {
+  border-radius: 999px;
+
+  font-weight: 700;
+
+  padding: 0.85rem 1.5rem;
+
+  transition: all 0.25s ease;
+}
+
+.button--primary {
+  background: #7a5a34;
+
+  border: 1px solid #7a5a34;
+
+  color: #f7f1e7;
+}
+
+.button--primary:hover {
+  background: #0d0d0d;
+
+  border-color: #0d0d0d;
+
+  color: #f7f1e7;
+}
+
+section {
+  margin-bottom: 5rem;
+}
+
+div[style*="border"] {
+  background:
+    rgba(255,255,255,0.58);
+
+  border:
+    1px solid rgba(122,90,52,0.18) !important;
+
+  border-radius: 18px !important;
+
+  box-shadow:
+    0 24px 70px rgba(0,0,0,0.08);
+
+  backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+div[style*="border"]:hover {
+  transform: translateY(-6px);
+
+  border-color:
+    rgba(122,90,52,0.4) !important;
+
+  box-shadow:
+    0 28px 80px rgba(0,0,0,0.14);
+}
+
+section h2 {
+  position: relative;
+
+  display: inline-block;
+
+  padding-bottom: 0.5rem;
+}
+
+section h2::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 70%;
+  height: 2px;
+
+  background:
+    linear-gradient(
+      90deg,
+      #7a5a34,
+      rgba(122,90,52,0.15)
+    );
+}
+
+code {
+  background:
+    rgba(122,90,52,0.08);
+
+  color: #7a5a34;
+}
+.hero-divider {
+  width: 120px;
+  height: 2px;
+
+  margin: 1.5rem auto;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #7a5a34,
+      transparent
+    );
+}
+
+.hero-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1rem;
+
+  flex-wrap: wrap;
+
+  margin-top: 2rem;
+}
+
+.button--secondary {
+  background: transparent;
+
+  border: 1px solid rgba(122,90,52,0.4);
+
+  color: #7a5a34;
+}
+
+.button--secondary:hover {
+  background: #0d0d0d;
+
+  color: #f7f1e7;
+}
+
+.hero-section {
+  position: relative;
+  text-align: center;
+  max-width: 1000px;
+  margin: 0 auto 5rem auto;
+  padding: 6rem 2rem;
+  border: 1px solid rgba(122, 90, 52, 0.18);
+  border-radius: 28px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top left, rgba(122, 90, 52, 0.18), transparent 35%),
+    radial-gradient(circle at bottom right, rgba(0, 0, 0, 0.08), transparent 35%),
+    rgba(255, 255, 255, 0.38);
+  box-shadow: 0 30px 90px rgba(0,0,0,0.08);
+}
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.project-card {
+  position: relative;
+  padding: 2rem;
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(122, 90, 52, 0.22);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 90px rgba(0,0,0,0.14);
+}
+.profile-image {
+  width: 150px;
+  height: 150px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  margin-bottom: 1.5rem;
+
+  border: 3px solid rgba(122, 90, 52, 0.35);
+
+  box-shadow:
+    0 12px 35px rgba(0,0,0,0.12);
+}
+.hero-logo {
+  width: 115px;
+  height: 115px;
+
+  object-fit: contain;
+
+  position: absolute;
+
+  top: 35px;
+  left: 35px;
+
+  filter:
+    drop-shadow(0 10px 30px rgba(0,0,0,0.18));
+}
+h1 {
+  font-size: clamp(3rem, 7vw, 5rem);
+  line-height: 1;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.1;
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+p,
+li {
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.hero-section p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+}
+
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+/* Premium navbar refinement */
+
+.navbar {
+  backdrop-filter: blur(18px);
+
+  background:
+    rgba(0, 0, 0, 0.9) !important;
+
+  border-bottom:
+    1px solid rgba(247, 241, 231, 0.12);
+
+  box-shadow:
+    0 10px 35px rgba(0,0,0,0.18);
+
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.navbar__title {
+  font-family: Georgia, serif;
+
+  font-size: 1.1rem;
+
+  letter-spacing: 0.04em;
+
+  color: #f7f1e7 !important;
+}
+
+.navbar a {
+  transition:
+    color 0.25s ease,
+    opacity 0.25s ease;
+}
+
+.navbar a:hover {
+  color: #9c7a4d !important;
+
+  opacity: 1;
+}
+
+.navbar__items {
+  gap: 0.5rem;
+}
+
+.navbar__link {
+  font-size: 0.95rem;
+
+  letter-spacing: 0.02em;
+}
+@media screen and (max-width: 768px) {
+
+  main {
+    padding: 1.5rem !important;
+  }
+
+  .hero-section {
+    padding: 2rem 1rem;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+
+  .hero-logo {
+    position: static;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1rem;
+  }
+
+  .profile-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .hero-buttons .button {
+    width: 100%;
+  }
+
+  section {
+    margin-bottom: 3rem;
+  }
+
+  .card {
+    padding: 1.5rem;
+  }
+}
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-badge {
+  background:
+    rgba(122, 90, 52, 0.12);
+
+  border:
+    1px solid rgba(122, 90, 52, 0.25);
+
+  color: #7a5a34;
+
+  padding:
+    0.7rem 1.1rem;
+
+  border-radius: 999px;
+
+  font-size: 0.95rem;
+
+  font-weight: 600;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.skill-badge:hover {
+  transform: translateY(-3px);
+
+  background:
+    rgba(122, 90, 52, 0.18);
+}
+.project-preview {
+  width: 100%;
+
+  height: 260px;
+
+  object-fit: contain;
+
+  background: rgba(0,0,0,0.03);
+
+  border-radius: 14px;
+
+  margin-bottom: 1.25rem;
+
+  padding: 0.5rem;
+
+  border:
+    1px solid rgba(122, 90, 52, 0.2);
+
+  box-shadow:
+    0 12px 30px rgba(0,0,0,0.08);
+
+  transition:
+    transform 0.25s ease;
+}
+.project-card img.project-preview {
+  width: 100% !important;
+  height: 260px !important;
+  object-fit: contain !important;
+  display: block;
 }
