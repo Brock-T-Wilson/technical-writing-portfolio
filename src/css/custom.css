@@ -479,3 +479,67 @@ li {
   object-fit: contain !important;
   display: block;
 }
+
+/* ================================
+   Projects / Docs Page Polish Only
+   ================================ */
+
+.theme-doc-markdown {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  padding-bottom: 4rem;
+}
+
+/* Smaller, cleaner document headings */
+.theme-doc-markdown h1 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 0.75rem;
+}
+
+.theme-doc-markdown h2 {
+  font-size: 1.35rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.theme-doc-markdown h3 {
+  font-size: 1.1rem;
+  margin-top: 1.5rem;
+}
+
+/* Better reading feel */
+.theme-doc-markdown p {
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Cleaner lists */
+.theme-doc-markdown li {
+  margin-bottom: 0.35rem;
+}
+
+/* Cleaner tables */
+.theme-doc-markdown table {
+  font-size: 0.95rem;
+}
+
+/* Sidebar polish */
+.theme-doc-sidebar-container {
+  border-right: 1px solid rgba(125, 125, 125, 0.2);
+}
+
+.menu__link {
+  font-size: 0.95rem;
+  border-radius: 6px;
+}
+
+.menu__link--active {
+  font-weight: 600;
+}
+
+/* Right-side table of contents */
+.table-of-contents {
+  font-size: 0.85rem;
+}

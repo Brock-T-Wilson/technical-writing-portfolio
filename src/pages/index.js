@@ -75,7 +75,7 @@ export default function Home() {
           <div className="project-grid">
             <div className="project-card">
               <img
-  src={useBaseUrl('/v19x-preview.png')}
+  src={useBaseUrl('/img/v19x-logo.png')}
   alt="V19x API documentation preview"
   className="project-preview"
 />
@@ -90,20 +90,26 @@ export default function Home() {
             </div>
 
             <div className="project-card">
-              <img
-  src={useBaseUrl('/xbox-preview.png')}
-  alt="Xbox Player Data API documentation preview"
-  className="project-preview"
-/>
-              <h3>Xbox Player Data API</h3>
-              <p>
-                REST API documentation demonstrating authentication, player data
-                retrieval, and response examples.
-              </p>
-              <a href="https://github.com/Brock-T-Wilson/Xbox-Player-Data-API">
-                View GitHub Repository
-              </a>
-            </div>
+  <img
+    src={useBaseUrl('/img/titanx-preview.png')}
+    alt="TitanX Agriculture Solutions documentation portal preview"
+    className="project-preview"
+  />
+
+  <h3>TitanX Agriculture Solutions</h3>
+
+  <p>
+    Enterprise agricultural equipment documentation portal built with
+    Docusaurus featuring operational procedures, troubleshooting
+    workflows, maintenance systems, dealer support documentation,
+    workflow diagrams, equipment specifications, and safety-focused
+    technical content.
+  </p>
+
+  <a href="https://brock-t-wilson.github.io/TitanX-Agriculture-Solutions-Documentation/">
+    View Live Documentation
+  </a>
+</div>
 
             <div className="project-card">
   <img

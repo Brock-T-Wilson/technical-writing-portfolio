@@ -1,32 +1,61 @@
-# V19x API Documentation
+---
+id: v19x-api
+title: V19x Player Account API Documentation
+sidebar_label: Overview
+---
 
-## Overview
-This project demonstrates API documentation for the V19X API. The goal is to help developers understand how to make requests, read responses, and troubleshoot common issues.
+# V19x Player Account API Documentation
 
-## What I Did
-- Documented API endpoints
-- Explained request structure
-- Added response examples
-- Organized information for developer readability
-- Included troubleshooting notes
+![V19x Platform Branding](/img/v19x-logo.png)
 
-## Documentation Focus
-- Clear endpoint descriptions
-- Request and response examples
-- Error handling guidance
-- Simple navigation for developers
+The V19x Player Account API is a mock REST API documentation project focused on authentication workflows, account security, multi-factor authentication (MFA), session management, and security event tracking.
+
+This project demonstrates structured API documentation practices for identity and account management systems.
+
+---
+
+## Documentation Scope
+
+This project includes documentation for:
+
+- Authentication workflows
+- MFA configuration
+- Session management
+- Security event monitoring
+- Account status management
+- Error handling
+- Token lifecycle concepts
+
+---
+
+## Key Features
+
+- Security-focused API documentation
+- MFA workflow examples
+- Session tracking concepts
+- Error handling documentation
+- Structured endpoint organization
+- Troubleshooting guidance
+
+---
 
 ## Tools Used
+
+- Postman
 - Markdown
 - GitHub
-- API documentation principles
-- Technical Writing
+- REST API concepts
 
-## Skills Demonstrated
-- API documentation
-- Developer documentation
-- Information architecture
-- Clear technical communication
+---
+
+## Purpose of Project
+
+This project was created to demonstrate technical writing skills related to authentication systems, security-focused API documentation, and developer-focused technical content.
+
+---
 
 ## Link
-https://github.com/Brock-T-Wilson/V19x-Player-Account-API-Docs
+
+<a href="https://github.com/Brock-T-Wilson/V19x-Player-Account-API-Docs">
+  View Documentation
+</a>
